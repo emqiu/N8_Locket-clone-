@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.locketclone.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_loginEmailFragment"
+            app:destination="@id/loginEmailFragment"
+            app:enterAnim="@anim/transition_right_in"
+            app:exitAnim="@anim/transition_left_out"
+            app:popEnterAnim="@anim/transition_left_in"
+            app:popExitAnim="@anim/transition_right_out" />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpEmailFragment"
+            app:destination="@id/signUpEmailFragment"
+            app:enterAnim="@anim/transition_right_in"
+            app:exitAnim="@anim/transition_left_out"
+            app:popEnterAnim="@anim/transition_left_in"
+            app:popExitAnim="@anim/transition_right_out" />
+        <action
+            android:id="@+id/action_loginFragment_to_cameraFragment2"
+            app:destination="@id/cameraFragment"
+            app:enterAnim="@anim/transition_zoom_in"
+            app:exitAnim="@anim/transition_zoom_out"
+            app:popEnterAnim="@anim/transition_zoom_in"
+            app:popExitAnim="@anim/transition_zoom_out"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginEmailFragment"
+        android:name="com.example.locketclone.ui.login.LoginEmailFragment"
+        android:label="fragment_login_email"
+        tools:layout="@layout/fragment_login_email" >
+        <action
+            android:id="@+id/action_loginEmailFragment_to_loginPasswordFragment"
+            app:destination="@id/loginPasswordFragment"
+            app:enterAnim="@anim/transition_right_in"
+            app:exitAnim="@anim/transition_left_out"
+            app:popEnterAnim="@anim/transition_left_in"
+            app:popExitAnim="@anim/transition_right_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginPasswordFragment"
+        android:name="com.example.locketclone.ui.login.LoginPasswordFragment"
+        android:label="fragment_login_password"
+        tools:layout="@layout/fragment_login_password" >
+        <action
+            android:id="@+id/action_loginPasswordFragment_to_loginUsernameFragment"
+            app:destination="@id/loginUsernameFragment"
+            app:enterAnim="@anim/transition_right_in"
+            app:exitAnim="@anim/transition_left_out"
+            app:popEnterAnim="@anim/transition_left_in"
+            app:popExitAnim="@anim/transition_right_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginUsernameFragment"
+        android:name="com.example.locketclone.ui.login.LoginUsernameFragment"
+        android:label="fragment_login_username"
+        tools:layout="@layout/fragment_login_username" >
+        <action
+            android:id="@+id/action_loginUsernameFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/transition_zoom_in"
+            app:exitAnim="@anim/transition_zoom_out"
+            app:popEnterAnim="@anim/transition_zoom_in"
+            app:popExitAnim="@anim/transition_zoom_out"
+            app:popUpTo="@id/loginUsernameFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpEmailFragment"
+        android:name="com.example.locketclone.ui.register.SignUpEmailFragment"
+        android:label="fragment_sign_up_email"
+        tools:layout="@layout/fragment_sign_up_email" >
+        <action
+            android:id="@+id/action_signUpEmailFragment_to_signUpPasswordFragment"
+            app:destination="@id/signUpPasswordFragment"
+            app:enterAnim="@anim/transition_right_in"
+            app:exitAnim="@anim/transition_left_out"
+            app:popEnterAnim="@anim/transition_left_in"
+            app:popExitAnim="@anim/transition_right_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpPasswordFragment"
+        android:name="com.example.locketclone.ui.register.SignUpPasswordFragment"
+        android:label="fragment_sign_up_password"
+        tools:layout="@layout/fragment_sign_up_password" >
+        <action
+            android:id="@+id/action_signUpPasswordFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment"
+            app:enterAnim="@anim/transition_right_in"
+            app:exitAnim="@anim/transition_left_out"
+            app:popEnterAnim="@anim/transition_right_out"
+            app:popExitAnim="@anim/transition_left_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.locketclone.ui.history.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.locketclone.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_editUsernameFragment"
+            app:destination="@id/editUsernameFragment"
+            app:enterAnim="@anim/transition_right_in"
+            app:exitAnim="@anim/transition_left_out"
+            app:popEnterAnim="@anim/transition_left_in"
+            app:popExitAnim="@anim/transition_right_out" />
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/transition_zoom_in"
+            app:exitAnim="@anim/transition_zoom_out"
+            app:popEnterAnim="@anim/transition_zoom_in"
+            app:popExitAnim="@anim/transition_zoom_out"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/editUsernameFragment"
+        android:name="com.example.locketclone.ui.profile.EditUsernameFragment"
+        android:label="fragment_edit_username"
+        tools:layout="@layout/fragment_edit_username" />
+    <fragment
+        android:id="@+id/friendsFragment"
+        android:name="com.example.locketclone.ui.friends.FriendsFragment"
+        android:label="fragment_friends"
+        tools:layout="@layout/fragment_friends" />
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.example.locketclone.ui.camera.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" >
+        <action
+            android:id="@+id/action_cameraFragment_to_friendsFragment"
+            app:destination="@id/friendsFragment"
+            app:enterAnim="@anim/transition_left_in"
+            app:exitAnim="@anim/transition_right_out"
+            app:popEnterAnim="@anim/transition_right_in"
+            app:popExitAnim="@anim/transition_left_out" />
+        <action
+            android:id="@+id/action_cameraFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/transition_right_in"
+            app:exitAnim="@anim/transition_left_out"
+            app:popEnterAnim="@anim/transition_left_in"
+            app:popExitAnim="@anim/transition_right_out" />
+        <action
+            android:id="@+id/action_cameraFragment_to_historyFragment"
+            app:destination="@id/historyFragment"
+            app:enterAnim="@anim/transition_bottom_in"
+            app:exitAnim="@anim/transition_top_out"
+            app:popEnterAnim="@anim/transition_top_in"
+            app:popExitAnim="@anim/transition_bottom_out" />
+    </fragment>
+</navigation>
